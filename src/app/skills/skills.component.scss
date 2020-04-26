@@ -1,0 +1,19 @@
+:host::ng-deep {
+  .mat-card-image {
+    max-width: 250px;
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+mat-grid-tile {
+  background-color: red;
+}
+
+mat-grid-list {
+  height: 100%;
+}
+
+.cloud-skill button {
+  margin: 5px;
+}

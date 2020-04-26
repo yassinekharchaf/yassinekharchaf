@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+  padding: 20px 0;
+  background-color: #3a3a3a;
+}
+
+mat-toolbar {
+  background-color: white;
+  justify-content: center;
+  height: auto;
+  margin: 15px 0;
+
+  a {
+    text-decoration: none;
+    display: inline-block;
+    margin: 0 15px;
+  }
+
+  @media screen and (max-width:570px) {
+    span {
+      display: block;
+      text-align: center;
+    }
+  }
+
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: 1024px;
+  padding: 0 15px;
+}
