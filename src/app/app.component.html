@@ -15,6 +15,11 @@
     <mat-icon>dashboard</mat-icon> <span>Portfolio</span>
   </a>
 </mat-toolbar>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="wrapper">
+  <div class="container">
+    <div [@fadeAnimation]="o && o.activatedRouteData
+      && o.activatedRouteData['animation']">
+      <router-outlet #o="outlet"></router-outlet>
+    </div>
+  </div>
 </div>

@@ -6,10 +6,23 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: WhoAmIComponent, pathMatch: 'full' },
-  { path: 'skills', component: SkillsComponent },
-  { path: 'services', component: ServicesComponent },
-  { path: 'portfolio', component: PortfolioComponent },
+  {
+    path: '',
+    component: WhoAmIComponent,
+    pathMatch: 'full',
+    data: { animation: 'home' },
+  },
+  { path: 'skills', component: SkillsComponent, data: { animation: 'skills' } },
+  {
+    path: 'services',
+    component: ServicesComponent,
+    data: { animation: 'services' },
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
+    data: { animation: 'portfolio' },
+  },
 ];
 
 @NgModule({

@@ -2,8 +2,9 @@
   <div class="row">
     <div class="col-md-4">
       <mat-list role="list">
-        <mat-list-item role="listitem" *ngFor="let service of services"><button mat-flat-button
-                  (click)="updateCurrentService(service)">{{service.name}}</button>
+        <mat-list-item [class.active]="service === currentService" role="listitem" *ngFor="let service of services"
+                       (click)="updateCurrentService(service)">
+          {{service.name}}
         </mat-list-item>
       </mat-list>
     </div>
@@ -12,6 +13,9 @@
         <div class="card-body">
 
           <h2 class="card-title text-center">{{currentService.name}}</h2>
+          <img class="card-img-service" [src]="'/assets/img/services/' + currentService.imgUrl"
+               [alt]="currentService.name">
+          <p>{{currentService.description}}</p>
         </div>
       </div>
     </div>
