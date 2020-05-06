@@ -26,6 +26,13 @@ $portfolio-theme: mat-light-theme($portfolio-primary, $portfolio-accent, $portfo
 @include angular-material-theme($portfolio-theme);
 
 /* You can add global styles to this file, and also import other style files */
+$fa-font-path: "./assets/fonts/fontawesome";
+$fa-font-size-base: 20px;
+@import '~@fortawesome/fontawesome-free/scss/fontawesome';
+@import '~@fortawesome/fontawesome-free/scss/regular';
+@import '~@fortawesome/fontawesome-free/scss/solid';
+@import '~@fortawesome/fontawesome-free/scss/brands';
+
 
 html,
 body {
@@ -57,6 +64,16 @@ h2.card-title {
 
 .card-img-service {
   max-height: 250px;
-  margin: 0 auto;
+  margin: 0 auto 20px;
   display: block;
+  border-radius: 5px;
+  ;
+}
+
+.card {
+  box-shadow: 0 0 8px 0px #00000040;
+}
+
+.fab {
+  font-size: 18px;
 }

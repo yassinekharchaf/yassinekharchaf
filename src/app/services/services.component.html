@@ -1,21 +1,28 @@
 <div class="container-fluid">
   <div class="row">
     <div class="col-md-4">
-      <mat-list role="list">
-        <mat-list-item [class.active]="service === currentService" role="listitem" *ngFor="let service of services"
-                       (click)="updateCurrentService(service)">
-          {{service.name}}
-        </mat-list-item>
-      </mat-list>
+      <div class="card">
+        <div class="card-body">
+          <mat-list role="list">
+            <mat-list-item [class.active]="service === currentService" role="listitem" *ngFor="let service of services"
+                           (click)="updateCurrentService(service)">
+              {{service.name}}
+            </mat-list-item>
+          </mat-list>
+        </div>
+      </div>
     </div>
     <div class="col-md-8">
       <div class="card">
         <div class="card-body">
 
           <h2 class="card-title text-center">{{currentService.name}}</h2>
-          <img class="card-img-service" [src]="'/assets/img/services/' + currentService.imgUrl"
+          <img class="card-img-service" [src]="'assets/img/services/' + currentService.imgUrl"
                [alt]="currentService.name">
           <p>{{currentService.description}}</p>
+          <p>
+            <button mat-stroked-button class="subservice" *ngFor="let s of currentService.subservices">{{s}}</button>
+          </p>
         </div>
       </div>
     </div>

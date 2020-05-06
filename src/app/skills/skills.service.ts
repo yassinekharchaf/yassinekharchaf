@@ -5,6 +5,13 @@ import { Skill } from './skill';
   providedIn: 'root',
 })
 export class SkillsService {
+  currentSkill: Skill = {
+    name: 'Angular',
+    imgUrl: 'angular.png',
+    description:
+      'Loving to work with angular that allows you to scale your apps easily and provide an awsome developer experience thanks to typescript.',
+  };
+
   skills: Array<Skill> = [
     {
       name: 'Angular',
@@ -56,4 +63,8 @@ export class SkillsService {
     },
   ];
   constructor() {}
+
+  updateCurrentSkill(skill: Skill) {
+    this.currentSkill = skill;
+  }
 }

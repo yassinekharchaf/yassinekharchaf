@@ -11,7 +11,13 @@ import { ServicesComponent } from './services/services.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
-  declarations: [AppComponent, WhoAmIComponent, SkillsComponent, ServicesComponent, PortfolioComponent],
+  declarations: [
+    AppComponent,
+    WhoAmIComponent,
+    SkillsComponent,
+    ServicesComponent,
+    PortfolioComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,

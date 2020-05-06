@@ -10,14 +10,16 @@ import { Skill } from './skill';
 export class SkillsComponent implements OnInit {
   skills: Array<Skill>;
   currentSkill: Skill;
-  constructor(public skillService: SkillsService) {}
+  constructor(private skillService: SkillsService) {}
 
   ngOnInit(): void {
     this.skills = this.skillService.skills;
-    this.currentSkill = this.skills[0];
+    this.currentSkill = this.skillService.currentSkill;
+    this.skillService.updateCurrentSkill(this.currentSkill);
   }
 
   updateCurrentSkill(skill: Skill) {
     this.currentSkill = skill;
+    this.skillService.updateCurrentSkill(skill);
   }
 }

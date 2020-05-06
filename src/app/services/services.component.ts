@@ -15,6 +15,7 @@ export class ServicesComponent implements OnInit {
   ngOnInit(): void {
     this.services = this.serviceService.services;
     this.currentService = this.services[0];
+    console.log(this.currentService.subservices);
   }
   updateCurrentService(service: Service) {
     this.currentService = service;
